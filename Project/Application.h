@@ -7,6 +7,7 @@ class Application {
     std::set<std::string> dictionaryWords;
     void loadDictionary();
     bool runAgain();
+    void printSeparator(const std::string& paragraph);
 public:
     Application();
     void run();

@@ -2,7 +2,9 @@
 
 void Application::run() {
     SentenceInDictionary sentenceObject;
+    printSeparator("");
     sentenceObject.takeSentence(this->dictionaryWords);
+    printSeparator("");
     if(runAgain()) run();
 }
 
@@ -29,4 +31,10 @@ bool Application::runAgain() {
     std::cin >> input;
     if(input == "y" || input == "yes") return true;
     else return false;
+}
+
+void Application::printSeparator(const std::string &paragraph) {
+    int width = 155;
+    int part = width/2 - paragraph.size()/2;
+    std::cout << std::string(part, '-') << paragraph << std::string(part, '-') << '\n';
 }
